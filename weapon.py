@@ -1,3 +1,4 @@
 class Weapon:
-    def __init__(self) -> None:
-        pass
+    def __init__(self):
+        self.name = ''
+        self.attack_power = 37
