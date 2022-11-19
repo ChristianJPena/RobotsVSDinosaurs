@@ -3,8 +3,8 @@ from robot import Robot
 
 class Battlefield:
     def __init__(self):
-        self.robot1 = Robot('Terminator')
-        self.dinosaur1 = Dinosaur('Rex', 35)
+        self.robot1 = Robot('The Terminator')
+        self.dinosaur1 = Dinosaur('Rex', 45)
 
     def run_game(self):
         self.display_welcome()
@@ -12,8 +12,7 @@ class Battlefield:
         self.display_winner()
 
     def display_welcome(self):
-
-        print('\nWelcome to an epic battle for the ages!\nOnly one side can win!\n')
+        print('\nLets settle this once and for all\n🦖!ROBOTS VS DINOSAURS!🤖\n')
     
     def battle_phase(self):
         while self.dinosaur1.health > 0 and self.robot1.health > 0:
@@ -23,6 +22,6 @@ class Battlefield:
         
     def display_winner(self):
         if self.robot1.health <= 0:
-            print(f'{self.dinosaur1.name} deactivated {self.robot1.name}')
+            print(f'{self.dinosaur1.name} deactivated {self.robot1.name}\n🦖')
         elif self.dinosaur1.health <= 0:
-            print(f'{self.robot1.name} mauled {self.dinosaur1.name}')
+            print(f'{self.robot1.name} mauled {self.dinosaur1.name}\n🤖')
