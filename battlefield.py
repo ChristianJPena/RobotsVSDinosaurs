@@ -12,7 +12,7 @@ class Battlefield:
         self.display_winner()
 
     def display_welcome(self):
-        
+
         print('\nWelcome to an epic battle for the ages!\nOnly one side can win!\n')
     
     def battle_phase(self):
@@ -26,10 +26,3 @@ class Battlefield:
             print(f'{self.dinosaur1.name} deactivated {self.robot1.name}')
         elif self.dinosaur1.health <= 0:
             print(f'{self.robot1.name} mauled {self.dinosaur1.name}')
-        # .
-        # .
-        # .
-        # .
-        # .
-        # .
-        # .
