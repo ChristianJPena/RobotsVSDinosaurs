@@ -12,20 +12,14 @@ class Battlefield:
         self.display_winner()
 
     def display_welcome(self):
+        
         print('\nWelcome to an epic battle for the ages!\nOnly one side can win!\n')
     
     def battle_phase(self):
-        while self.robot1.health > 0 or self.dinosaur1.health > 0:
-            self.robot1.attack(self)
-            print(self.robot1.health)
-            self.dinosaur1.attack(self)
-            print(self.dinosaur1.health)
-        # .
-        # .
-        # .
-        # .
-        # .
-        # .
+        while self.dinosaur1.health > 0 and self.robot1.health > 0:
+            self.robot1.attack(self.dinosaur1)
+            if self.dinosaur1.health > 0:
+                self.dinosaur1.attack(self.robot1)
         
     def display_winner(self):
         if self.robot1.health <= 0:
